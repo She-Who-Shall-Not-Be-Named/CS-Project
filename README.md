@@ -4,6 +4,8 @@ Authors:
 Alicia Isler , Mackenzie Eng 
 
 
+Data set: https://data.cityofchicago.org/Education/Chicago-Public-Schools-Progress-Report-Cards-2011-/9xs2-f89t
+
 Questions (Mackenzie):
 
 Is there a correlation between the “location” (school safety score and environment score) and student attendance?

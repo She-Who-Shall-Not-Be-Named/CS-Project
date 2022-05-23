@@ -1,0 +1,70 @@
+Code:
+
+Mackenzie 
+
+Is there a correlation between the “location” (school safety score and environment score) and student attendance?
+
+SELECT 
+School Safety Score,
+Environment Score,
+Average Student Attendance
+	FROM Chicago Public Schools - Progress Report Cards
+	ORDER BY Average Student Attendance
+	ASC
+
+Which zip codes have the lowest average school safety scores and the lowest environment scores?
+
+SELECT
+ZIP Code,
+School Safety Score,
+Environment Score
+	FROM Chicago Public Schools - Progress Report Cards
+	GROUPBY ZIP Code
+	AVG(School Safety Score) AND AVG (Environment Score)
+	ORDERBY AVG(School Safety Score) 
+DSC
+
+	SELECT
+ZIP Code,
+School Safety Score,
+Environment Score
+	FROM Chicago Public Schools - Progress Report Cards
+	GROUPBY ZIP Code
+	AVG(School Safety Score) AND AVG (Environment Score)
+	ORDERBY AVG(Environment Score)
+DSC (Environment Score)
+
+Is there a correlation between teacher attendance, student attendance, and teacher performance (teacher score)?
+
+SELECT 
+	Average Teacher Attendance,
+	Average Student Attendance,
+	Teacher Score
+FROM Chicago Public Schools - Progress Report Cards
+ORDERBY Teacher Score
+ASC
+
+Alicia 
+
+Is there a correlation between zip code and family attendance score ?
+
+SELECT  ZIP Code, Family Involvement Icon
+FROM Chicago Public Schools - Progress Report Cards
+WHERE Family Involvement Icon = ‘Strong’
+GROUP BY ZIP Code 
+ORDER BY ZIP Code;
+
+Does low parental involvement and high rates of misconduct affect the yearly progress made in a school? 
+SELECT COUNT *
+FROM Chicago Public Schools - Progress Report Cards
+WHERE Parent Engagement Icon = ‘Weak’ AND Rates of Misconduct > 50
+ORDER BY ASC;
+
+
+Which elementary school zip codes have a higher CPS Performance level?
+
+SELECT  Elementary, Middle or High School, ZIP Code
+FROM Chicago Public Schools - Progress Report Cards
+WHERE CPS Performance Policy Level = ‘Level 3’
+GROUP BY ZIP Code 
+ORDER BY ASC;
